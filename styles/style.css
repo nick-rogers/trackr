@@ -1,0 +1,471 @@
+body {
+	background-color: #FAFAFA;
+	margin: 0;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	top: 0;
+	background-color: white;
+	z-index: 200;
+}
+
+.home {
+	position: absolute;
+	display: block;
+	width: 100px;
+	height: 50px;
+	background-color: black;
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+.right {
+	position: absolute;
+	right: 0;
+	width: 550px;
+	width: 55%;
+	width: 45vw;
+	height: 50px;
+	margin-top: 30px;
+}
+
+button, .updated {
+	display: block;
+	float: left;
+	height: 50px;
+}
+
+.refresh {
+	background-size: 60% 60%;
+	background-repeat: no-repeat;
+	background-image: url(../images/refresh.svg);
+	background-position: center;
+}
+
+button {
+	width: 50px;
+	background-color: #FAFAFA;
+	border-radius: 8px;
+	border-color: #C3C3C3;
+	border-style: solid;
+	border-width: 1px;
+	cursor: pointer;
+	outline: none;
+}
+
+button:hover {
+	background-color: #F0F0F0;
+}
+
+.updated {
+	font-family: sans-serif;
+	margin-left: 25px;
+	font-size: 18px;
+	line-height: 15px;
+	color: #a0a0a0;
+}
+
+
+.main {
+	display: block;
+	width: 90vw;
+	margin-left: 5vw;
+	text-align: center;
+}
+
+.middle {
+	display: inline-block;
+	width: 80%;
+	max-width: 900px;
+}
+
+.c-search, .c-stocks {
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.c-search {
+	height: 400px;
+}
+
+.c-stocks {
+	min-height: 200px;
+	margin-bottom: 300px;
+	border-radius: 8px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #a0a0a0;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.sb {
+	display: inline-block;
+	width: 550px;
+	margin-top: 265px;
+	height: 50px;
+	text-align: left;
+}
+
+
+.text-input {
+	position: absolute;
+	display: block;
+	border-style: none;
+	width: inherit;
+	height: 50px;
+	background-color: white;
+	opacity: 0.5;
+	border-width: 0px;
+	border-radius: 50px;
+	font-size: 18px;
+	text-indent: 20px;
+	box-shadow: 0px 2px 5px lightgrey;
+	outline: none;
+	color: black;
+}
+
+.text-input:focus {
+	box-shadow: 0px 5px 10px grey;
+}
+
+.submit {
+	position: absolute;
+	display: block;
+	height: 52px;
+	width: 152px;
+	z-index: 60;
+	border-style: none;
+	border-radius: 50px;
+	background-color: rgba(76,229,211,1);
+	background: rgb(76,229,211);
+	background: linear-gradient(180deg, rgba(76,229,211,1) 0%, rgba(55,211,188,1) 100%);
+	opacity: 0.8;
+	margin-left: 400px;
+	font-weight: 600;
+	color: white;
+	font-size: 14px;
+	outline: none;
+	transition: ease opacity 0.25s;
+}
+
+.submit:hover {
+	opacity: 0.6;
+}
+
+.label {
+	position: absolute;
+	text-align: left;
+	font-family: sans-serif;
+	margin-left: 0px;
+	font-size: 12px;
+	margin-top: -20px;
+	margin-left: 25px;
+	color: #a0a0a0;
+}
+
+
+
+
+/* Stock styles */
+
+
+.stock-card {
+	display: inline-block;
+	width: 80%;
+	min-width: 560px;
+	height: 220px;
+	background-color: white;
+	margin-bottom: 30px;
+	transition: ease opacity 0.25s;
+	opacity: 1;
+	border-radius: 8px;
+	border-style: solid;
+	border-style: none;
+	border-width: 1px;
+	border-color: #8B8B8B;
+	box-shadow: 0px 5px 10px lightgrey;
+}
+
+.background-text {
+	display: block;
+	font-family: sans-serif;
+	margin-top: 60px;
+	font-size: 12px;
+	font-weight: 600;
+	color: #C3C3C3;
+	display: none;
+}
+
+.del {
+	display: block;
+	height: 100%;
+	width: 40px;
+	background-color: #FAFAFA;
+	float: right;
+	cursor: pointer;
+	border-radius: 0px 8px 8px 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #8B8B8B;
+	border-style: none;
+}
+
+.del:hover {
+	background-color: #F0F0F0;
+}
+
+.trash {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-image: url(../images/trash.svg);
+	background-size: 90% 90%;
+	background-position: center;
+	margin-top: 88px;
+	pointer-events: none;
+}
+
+.info {
+	display: block;
+	float: left;
+	width: 145px;
+	height: 160px;
+	margin-top: 26px;
+	border-style: solid;
+	border-width: 0px 1px 0px 0px;
+	border-color: #8B8B8B;
+}
+
+.frames {
+	display: block;
+	float: left;
+	width: 66%;
+	height: 160px;
+	margin-top: 26px;
+	margin-left: 0.5%;
+}
+
+.f1, .f2 {
+	display: block;
+	height: 90px;
+	background-size: 100% 100%;
+	background-position: center;
+	margin-top: 30px;
+	float: left;
+	z-index: 150;
+}
+
+.f1 {
+	width: 62%;
+	margin-left: -3px;
+}
+
+.f-wrap {
+	height: 20%;
+}
+
+.f1-im {
+	position: absolute;
+	width: 25%;
+	max-width: 300px;
+	min-width: 200px;
+	height: inherit;
+	background-color: white;
+	background-size: 95% 95%;
+	background-position: center;
+	background-image: url(https://www.nasdaq.com/charts/EXPE_rm.jpeg);
+	filter: saturate(0);
+}
+
+.grad1 {
+	position: absolute;
+	width: 25%;
+	max-width: 300px;
+	min-width: 200px;
+	height: inherit;
+	background-image: url(../images/grad.svg);
+	background-size: 100% 100%;
+	mix-blend-mode: overlay;
+	mix-blend-mode: screen;
+}
+
+.f2-im {
+	position: absolute;
+	width: 15%;
+	max-width: 200px;
+	min-width: 140px;
+	height: inherit;
+	background-size: 95% 95%;
+	background-position: center;
+	filter: saturate(0);
+}
+
+.grad2 {
+	position: absolute;
+	width: 15%;
+	max-width: 200px;
+	min-width: 140px;
+	height: inherit;
+	background-image: url(../images/grad2.svg);
+	background-size: 100% 100%;
+	mix-blend-mode: overlay;
+	mix-blend-mode: screen;
+	margin-left: -2px;
+}
+
+
+.f2 {
+	width: 37.5%;
+	height: 120px;
+	margin-top: 20px;
+	margin-left: 0.5%;
+}
+
+.stock-symbol {
+	display: block;
+	width: inherit;
+	height: 40px;
+	margin-top: 0px;
+	text-align: left;
+	font-family: sans-serif;
+	font-size: 36px;
+	text-indent: 20px;
+	margin-bottom: 0px;
+}
+
+.stock-name {
+	display: block;
+	width: 80%;
+	text-align: left;
+	font-size: 12px;
+	font-weight: 300;
+	font-family: sans-serif;
+	margin-left: 22px;
+	margin-top: 0px;
+}
+
+.price, .trend {
+	display: block;
+	width: inherit;
+	float: left;
+	height: 32px;
+	margin: 0;
+	text-align: left;
+	font-family: sans-serif;
+	text-indent: 22px;
+	display: none;
+}
+
+.price {
+	margin-top: 30px;
+	font-size: 25px;
+}
+
+.trend {
+	color: green;
+}
+
+.company-logo {
+	display: block;
+	width: 100px;
+	height: 40px;
+	margin-left: 22px;
+	background-size: 100% 100%;
+}
+
+
+#spin {
+	pointer-events: none;
+	position: absolute;
+	display: block;
+	width: 36px;
+	height: 36px;
+	background-image: url(../images/spin.svg);
+	background-size: 100% 100%;
+	top: 0;
+	margin-top: 8px;
+	margin-left: 32%;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-duration: 1s;
+	transition: none;
+	animation-name: spinning;
+	opacity: 0;
+}
+
+
+@keyframes spinning {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+
+
+
+#add-stock {
+	opacity: 1;
+}
+
+
+
+.popup {
+	position: absolute;
+	font-size: 14px;
+	display: block;
+	width: 520px;
+	height: 30px;
+	background-color: #F45184;
+	margin-top: 65px;
+	opacity: 0.6;
+	border-radius: 8px;
+	margin-left: 12px;
+	text-indent: 22px;
+	padding-top: 10px;
+	font-family: sans-serif;
+	color: white;
+	opacity: 0;
+	transition: ease opacity 0.4s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.over {
+	display: block;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	opacity: 0.4;
+	background-size: 100% 180%;
+	background-image: url(../images/page-mock.png);
+	z-index: 100;
+	display: none;
+}
